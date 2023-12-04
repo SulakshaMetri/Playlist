@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.rtl.min.css" integrity="sha384-nU14brUcp6StFntEOOEBvcJm4huWjB0OcIeQ3fltAfSmuZFrkAif0T+UtNGlKKQv" crossorigin="anonymous">
+
+    <title>document</title>
+  </head>
+  <body>
+      {% load static %}
+      
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="/">MusicBeats</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/MusicBeats/songs">All Songs</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Dropdown
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="/MusicBeats/signup">Signup</a></li>
+                  <li><a class="dropdown-item" href="/MusicBeats/login">Login</a></li>
+                  <li><a class="dropdown-item" href="/MusicBeats/logout">Logout</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  
+                </ul>
+              </li>
+              
+            </ul>
+            <form class="d-flex" role="search" method="GET" action="/MusicBeats/search">
+              <input name="query" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+      <div id="carouselExample" class="carousel slide">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="{% static 'MusicBeats/music4.jpg'%}" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="{% static 'MusicBeats/music4.jpg'%}" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="{% static 'MusicBeats/music4.jpg'%}" class="d-block w-100" alt="...">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+      <!--###########################CARDS#################################-->
+      <h2 style="padding-left: 8%; padding-top: 2%; font-family: 'Verdana';">Trending Songs</h2>
+      <div class="row" style="padding-top: 2%; padding-left: 7%;">
+        {% for i in song %}
+        
+          <div class="card" style="width: 18rem;">
+        
+        <img src="/media/{{i.image}}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">{{i.name}}</h5>
+          <p class="card-text">{{i.tags}}</p>
+          <a href="/MusicBeats/songs/{{i.song_id}}" class="btn btn-outline-danger ">Listen</a>
+        </div>
+      </div>
+    
+      {% endfor %}
+    </div>
+    <hr>
+    
+      
+      <h2 style="padding-left: 7%;padding-top:2%; font-family:Verdana">Your Favourite Playlist</h2>
+    <div class="row" style="padding-top: 2%; padding-left: 7%;">
+       
+      <div class="card" style="width: 18rem;">
+        <img src="{% static 'MusicBeats/music4.jpg'%}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="#" class="btn btn-primary">Listen</a>
+        </div>
+      </div>
+    
+      
+      <div class="card" style="width: 18rem;">
+        <img src="{% static 'MusicBeats/music4.jpg'%}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="#" class="btn btn-primary">Listen</a>
+        </div>
+      
+      </div> 
+    
+      <div class="card" style="width: 18rem;">
+        <img src="{% static 'MusicBeats/music4.jpg'%}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="#" class="btn btn-primary">Listen</a>
+        </div>
+      </div>
+      </div>
+    
+<hr>
+      <h2 style="padding-left: 7%;padding-top:2%; font-family:Verdana">Liked Songs</h2>
+      
+    <div class="row" style="padding-top: 2%; padding-left: 7%;">
+       
+      <div class="card" style="width: 18rem;">
+        <img src="{% static 'MusicBeats/music4.jpg'%}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="#" class="btn btn-primary">Listen</a>
+        </div>
+      </div>
+    
+      
+      <div class="card" style="width: 18rem;">
+        <img src="{% static 'MusicBeats/music4.jpg'%}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="#" class="btn btn-primary">Listen</a>
+        </div>
+      
+      </div> 
+    
+      <div class="card" style="width: 18rem;">
+        <img src="{% static 'MusicBeats/music4.jpg'%}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="#" class="btn btn-primary">Listen</a>
+        </div>
+      </div>
+      </div>
+    
+<hr>
+    
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+    -->
+
+  </body>
+</html>
