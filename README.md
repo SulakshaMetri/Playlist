@@ -3,3 +3,5 @@ Music Playlist is an website where you can listen to songs, add songs and even d
 You can register into the website by opening the signup panel which is present in dropdown menu.
 And after signing up you can click on to login in case you want to switch to some other account which is already created.
 And logout panel will appear when you want to logout from the account.
+![FIGMAMODEL](https://github.com/SulakshaMetri/Playlist/assets/152889860/d766933a-4229-4063-9917-fd5194cbfb03)
+
