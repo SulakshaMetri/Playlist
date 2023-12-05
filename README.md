@@ -10,7 +10,8 @@ And logout panel will appear when you want to logout from the account.
 ![HOME PAGE](https://github.com/SulakshaMetri/Playlist/assets/152889860/788d573d-7b47-4058-8346-2b94a714da80)
 
 **SONGS ADDED TO THE PLAYLIST**
-![HOME PAGE](https://github.com/SulakshaMetri/Playlist/assets/152889860/60da9dcb-a8b4-4ad7-bfd1-a604ab659f4c)
+![SONGS](https://github.com/SulakshaMetri/Playlist/assets/152889860/f393111a-5d74-4c6e-a37d-c15ce2b19718)
+
 
 ![music](https://github.com/SulakshaMetri/Playlist/assets/152889860/93e0dadf-e528-4bed-85fe-1aa69bde6c65)
 
