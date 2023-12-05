@@ -12,5 +12,5 @@ And logout panel will appear when you want to logout from the account.
 **SONGS ADDED TO THE PLAYLIST**
 ![SONGS](https://github.com/SulakshaMetri/Playlist/assets/152889860/4fabd8e7-8c3d-484b-ac30-7fbf57683af0)
 
-
+![music](https://github.com/SulakshaMetri/Playlist/assets/152889860/5674c175-48df-4a8c-9f89-12a417e48b00)
 
